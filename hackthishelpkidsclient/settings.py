@@ -25,9 +25,9 @@ SECRET_KEY = 'l4(lbnkaqtp8yt2j34q&i4nto9t#a)x2uw2a3)hhttt2dla^9d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['d91b0f91.ngrok.io']
 
-
+CSRF_COOKIE_SECURE = False
 # Application definition
 
 INSTALLED_APPS = [
