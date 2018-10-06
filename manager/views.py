@@ -13,8 +13,15 @@ client = Client(account_sid, auth_token)
 
 
 def initiate_contact(request):
-    pass
+    data= {}
+    msg = 'Hello {}! You can find information about your visit, prescription, and other useful information at {}. Would you like to receive a reminder for your medication? Y/N?'.format(name, url)
+    message = client.messages.create(
+        from_='hospital_num',
+        body=msg,
+        to=phone_number
+    )
 
+    print(message.sid)
 
 @csrf_exempt
 def receive_from_twilio(request):
